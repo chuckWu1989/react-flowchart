@@ -1,13 +1,13 @@
 {
-  "name": "drc-starter-kit",
-  "version": "1.2.1",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "react-flowchart",
+  "version": "0.1.0",
+  "description": "React flowchart utility",
   "main": "./src/index.js",
-  "author": "Delta Research Center",
-  "license": "Delta",
+  "author": "Chuck Wu",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+http://twtpesir01.delta.corp/react/drc-starter-kit.git"
+    "url": "https://github.com/d9767192/react-flowchart.git"
   },
   "browserslist": [
     "Last 2 versions"
