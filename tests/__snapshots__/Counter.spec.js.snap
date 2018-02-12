@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component should render correctly 1`] = `
+<div
+  className="counter-style"
+>
+  <div
+    className="count"
+  >
+    <span>
+      5
+    </span>
+  </div>
+  <div
+    className="buttons"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Increase
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Decrease
+    </button>
+  </div>
+</div>
+`;

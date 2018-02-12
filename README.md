@@ -1,2 +1,3 @@
-# react-flowchart
-Flowchart based on storm-react-diagrams
+#React flowchart
+
+React flowchart

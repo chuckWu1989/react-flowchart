@@ -1,0 +1,44 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+
+stages:
+  - install
+  - test
+  - release
+
+install:
+  image: node:7
+  stage: install
+  cache:
+    key: node_modules
+    paths:
+      - node_modules
+  script:
+    - npm install --quiet
+
+coverage:
+  image: node:7
+  stage: test
+  cache:
+    key: node_modules
+    policy: pull
+    paths:
+      - node_modules
+  script:
+    - npm run test:coverage
+  coverage: /All files\s*\|\s*([\d\.]+)/
+
+release:
+  image: 172.16.8.73:5000/ssir-ssh-client:latest
+  stage: release
+  only:
+    - tags
+  script:
+    - export BUILD_VERSION=$CI_BUILD_TAG
+    - export ZIP_NAME=drc-starter-kit_${BUILD_VERSION}.zip
+    - git archive -o ${ZIP_NAME} HEAD
+    - scp ${ZIP_NAME} gitlab.runner@10.136.225.86:/servers/file-server/release/drc-starter-kit/
+
