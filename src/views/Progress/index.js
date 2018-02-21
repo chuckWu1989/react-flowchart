@@ -9,6 +9,9 @@ import {
   PORTSIZE,
   TITLE,
   CONTENT,
+  STYLE,
+  TITLESTYLE,
+  CONTENTSTYLE,
 } from './props';
 import { RIGHT, LEFT, TOP, BOTTOM } from '../../models/PortModel/props';
 import './style.less';
@@ -21,21 +24,24 @@ const Progress = (props) => {
     [NODE]: node,
     [TITLE]: title,
     [CONTENT]: content,
+    [STYLE]: style,
+    [TITLESTYLE]: titleStyle,
+    [CONTENTSTYLE]: contentStyle,
     ...others
   } = props;
   return (
     <div
       className="progress-widget-style"
-      style={{ width, height }}
+      style={{ width, height, ...style }}
     >
       <div className="progress-container">
-        <div className="progress-title">
+        <div className="progress-title" style={titleStyle}>
           {title}
         </div>
         {
           content ?
           (
-            <div className="progress-content">
+            <div className="progress-content" style={contentStyle}>
               {content}
             </div>
           ) :
