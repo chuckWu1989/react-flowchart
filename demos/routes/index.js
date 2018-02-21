@@ -14,7 +14,7 @@ const MyRouter = () => (
       </div>
       <div className="content-body">
         <Switch>
-          <Route exact path="/" component={lazyLoading(() => import('./HomePage'))} />
+          <Route exact path="/" component={lazyLoading(() => import('./SimpleExample'))} />
         </Switch>
       </div>
     </div>

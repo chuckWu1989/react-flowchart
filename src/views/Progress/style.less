@@ -1,0 +1,35 @@
+.progress-widget-style {
+  position: relative;
+  background-color: #ffffff;
+  border: solid 2px #3492ff;
+  display: flex;
+  .progress-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: Microsoft JhengHei;
+    .progress-title, .progress-content {
+      margin: 5px 10px;
+    }
+    .progress-title {
+      display: flex;
+      flex: 1;
+      font-size: 18px;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+    }
+    .progress-content {
+      display: flex;
+      flex: 2;
+      font-size: 14px;
+      justify-content: center;
+    }
+  }
+  .progress-port {
+    position: absolute;
+    z-index: 10;
+  }
+}

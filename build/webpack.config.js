@@ -75,7 +75,7 @@ const extractStyles = new ExtractTextPlugin({
 const cssLoader = {
   loader: 'css-loader',
   options: {
-    sourceMap: project.sourcemaps,
+    sourceMap: false,
     minimize: {
       discardComments: {
         removeAll: true,
