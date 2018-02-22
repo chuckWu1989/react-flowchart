@@ -1,0 +1,35 @@
+.decision-widget-style {
+  position: relative;
+  .shape-outside-left {
+    width: 50%;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
+  }
+  .shape-outside-right {
+    width: 50%;
+    height: 100%;
+    float: right;
+    shape-outside: polygon(100% 0,100% 100%,0% 100%,100% 50%,0% 0);
+  }
+  .backgroud-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 50%,50% 0,100% 50%,50% 100%);
+  }
+  .decision-title, .decision-content {
+    text-align: center;
+    margin: 0;
+    font-family: Microsoft JhengHei;
+    position: inherit;
+    width: 100%;
+    height: 100%;
+  }
+  .decision-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}

@@ -7,7 +7,7 @@ export const COLOR = 'portColor';
 export const HOVERCOLOR = 'portHoverColor';
 export const STYLE = 'portStyle';
 export const defaultProps = {
-  [SIZE]: 15,
+  [SIZE]: 10,
   [COLOR]: '#3492ff',
   [HOVERCOLOR]: '#00c0ff',
   [STYLE]: {},
