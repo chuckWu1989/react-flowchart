@@ -8,7 +8,7 @@ import {
   defaultProps,
   propTypes,
 } from './props';
-import { RIGHT, LEFT, TOP, BOTTOM } from '../../models/PortModel/props';
+import { RIGHT, LEFT, TOP, BOTTOM } from '../../models/Port/props';
 import './style.less';
 
 const NodePorts = (props) => {
