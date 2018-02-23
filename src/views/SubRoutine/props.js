@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export const TITLE = 'title';
 export const CONTENT = 'content';
 export const WIDTH = 'width';
-export const HEIGHT = 'height';
+export const HEIGHT = ' height';
 export const BKCOLOR = 'bkColor';
 export const STYLE = 'style';
 export const TITLESTYLE = 'titleStyle';
@@ -23,7 +23,6 @@ export const propTypes = {
   [CONTENT]: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
   [WIDTH]: PropTypes.number,
   [HEIGHT]: PropTypes.number,
-  [BKCOLOR]: PropTypes.string,
   [STYLE]: PropTypes.object,
   [TITLESTYLE]: PropTypes.object,
   [CONTENTSTYLE]: PropTypes.object,

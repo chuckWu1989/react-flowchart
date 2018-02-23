@@ -1,6 +1,8 @@
 import React from 'react';
 import NodePorts from '../NodePorts';
 import {
+  defaultProps,
+  propTypes,
   TITLE,
   CONTENT,
   WIDTH,
@@ -9,12 +11,10 @@ import {
   STYLE,
   TITLESTYLE,
   CONTENTSTYLE,
-  defaultProps,
-  propTypes,
 } from './props';
 import './style.less';
 
-const Data = (props) => {
+const SubRoutine = (props) => {
   const {
     [TITLE]: title,
     [CONTENT]: content,
@@ -29,7 +29,7 @@ const Data = (props) => {
   const boxHeight = (height / width) * 100;
   return (
     <div
-      className="data-widget-style"
+      className="subroutine-widget-style"
       style={{ width, height, ...style }}
     >
       <svg
@@ -37,18 +37,23 @@ const Data = (props) => {
         width={width}
         height={height}
         viewBox={`0 0 100 ${boxHeight}`}
-        fill={BKColor}
       >
-        <path d={`M 10 0 L 0 ${boxHeight} L 90 ${boxHeight} L 100 0 L 10 0`} />
+        <g fill={BKColor}>
+          <path d={`M 0 0 L 0 ${boxHeight} L 100 ${boxHeight} L 100 0 L 0 0`} />
+        </g>
+        <g>
+          <path d={`M 10 0 L 10 ${boxHeight}`} strokeWidth={1.5} stroke="#ffffff" />
+          <path d={`M 90 0 L 90 ${boxHeight}`} strokeWidth={1.5} stroke="#ffffff" />
+        </g>
       </svg>
-      <div className="data-container">
-        <div className="data-title" style={titleStyle}>
+      <div className="subroutine-container">
+        <div className="subroutine-title" style={titleStyle}>
           {title}
         </div>
         {
           content ?
           (
-            <div className="data-content" style={contentStyle}>
+            <div className="subroutine-content" style={contentStyle}>
               {content}
             </div>
           ) :
@@ -59,7 +64,7 @@ const Data = (props) => {
     </div>
   );
 };
-Data.defaultProps = defaultProps;
-Data.propTypes = propTypes;
+SubRoutine.defaultProps = defaultProps;
+SubRoutine.propTypes = propTypes;
 
-export default React.createFactory(Data);
+export default React.createFactory(SubRoutine);

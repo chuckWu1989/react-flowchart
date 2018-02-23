@@ -11,9 +11,9 @@ export const CONTENTSTYLE = 'contentStyle';
 export const defaultProps = {
   [TITLE]: 'Untitled',
   [CONTENT]: undefined,
-  [WIDTH]: 150,
+  [WIDTH]: 80,
   [HEIGHT]: 100,
-  [BKCOLOR]: '#3492ff',
+  [BKCOLOR]: '#007bbb',
   [STYLE]: {},
   [TITLESTYLE]: {},
   [CONTENTSTYLE]: {},
