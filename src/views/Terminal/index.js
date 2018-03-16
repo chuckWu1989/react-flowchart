@@ -43,4 +43,4 @@ const Terminal = (props) => {
 Terminal.defaultProps = defaultProps;
 Terminal.propTypes = propTypes;
 
-export default React.createFactory(Terminal);
+export default Terminal;

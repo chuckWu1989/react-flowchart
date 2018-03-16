@@ -1,14 +1,16 @@
+import React from 'react';
 import { NodeFactory as Factory } from 'storm-react-diagrams';
 
 class NodeFactory extends Factory {
-  constructor(type, WidgetFacotry, NodeModel) {
+  constructor(type, Widget, NodeModel) {
     super(type);
-    this.WidgetFacotry = WidgetFacotry;
+    this.Widget = Widget;
     this.NodeModel = NodeModel;
   }
-  generateReactWidget = (diagramEngine, { props, ...node }) => (
-    this.WidgetFacotry({ node, ...props })
-  )
+  generateReactWidget = (diagramEngine, { props, ...node }) => {
+    const { Widget } = this;
+    return <Widget {...props} node={node} />;
+  }
   getNewInstance = () => new this.NodeModel();
 }
 

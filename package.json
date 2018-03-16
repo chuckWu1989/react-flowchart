@@ -1,6 +1,6 @@
 {
   "name": "react-flowchart",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "React flowchart utility",
   "main": "./src/index.js",
   "author": "Chuck Wu",
@@ -26,6 +26,7 @@
     "release": "np --no-publish --any-branch"
   },
   "dependencies": {
+    "classes": "^0.3.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
     "prop-types": "^15.5.10",
@@ -43,7 +44,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "storm-react-diagrams": "^4.0.0"
+    "storm-react-diagrams": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",

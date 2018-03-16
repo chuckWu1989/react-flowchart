@@ -68,4 +68,4 @@ const DataBase = (props) => {
 DataBase.defaultProps = defaultProps;
 DataBase.propTypes = propTypes;
 
-export default React.createFactory(DataBase);
+export default DataBase;

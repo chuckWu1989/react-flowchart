@@ -52,4 +52,4 @@ const Documents = (props) => {
 Documents.defaultProps = defaultProps;
 Documents.propTypes = propTypes;
 
-export default React.createFactory(Documents);
+export default Documents;

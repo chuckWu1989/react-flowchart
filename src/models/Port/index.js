@@ -1,4 +1,4 @@
-import { PortModel as Model } from 'storm-react-diagrams';
+import { PortModel as Model, DefaultLinkModel } from 'storm-react-diagrams';
 import lodash from 'lodash';
 import { defaultProps, POS } from './props';
 
@@ -18,6 +18,16 @@ class PortModel extends Model {
     super.deSerialize(data);
     this[POS] = data.position;
   };
+  link(port) {
+    const link = this.createLinkModel();
+    link.setSourcePort(this);
+    link.setTargetPort(port);
+    return link;
+  }
+  createLinkModel() {
+    const link = super.createLinkModel();
+    return link || new DefaultLinkModel();
+  }
 }
 
 export default PortModel;

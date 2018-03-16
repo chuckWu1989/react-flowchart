@@ -47,4 +47,4 @@ const Connect = (props) => {
 Connect.defaultProps = defaultProps;
 Connect.propTypes = propTypes;
 
-export default React.createFactory(Connect);
+export default Connect;

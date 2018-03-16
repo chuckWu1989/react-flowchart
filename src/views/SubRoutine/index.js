@@ -67,4 +67,4 @@ const SubRoutine = (props) => {
 SubRoutine.defaultProps = defaultProps;
 SubRoutine.propTypes = propTypes;
 
-export default React.createFactory(SubRoutine);
+export default SubRoutine;

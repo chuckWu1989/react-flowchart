@@ -42,4 +42,4 @@ const Decision = (props) => {
 Decision.defaultProps = defaultProps;
 Decision.propTypes = propTypes;
 
-export default React.createFactory(Decision);
+export default Decision;

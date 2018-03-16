@@ -50,4 +50,4 @@ const Progress = (props) => {
 Progress.defaultProps = defaultProps;
 Progress.propTypes = propTypes;
 
-export default React.createFactory(Progress);
+export default Progress;

@@ -54,4 +54,4 @@ const OffPage = (props) => {
 OffPage.defaultProps = defaultProps;
 OffPage.propTypes = propTypes;
 
-export default React.createFactory(OffPage);
+export default OffPage;

@@ -62,4 +62,4 @@ const Data = (props) => {
 Data.defaultProps = defaultProps;
 Data.propTypes = propTypes;
 
-export default React.createFactory(Data);
+export default Data;
